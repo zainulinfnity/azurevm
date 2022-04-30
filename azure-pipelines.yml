@@ -26,8 +26,8 @@ steps:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/skip-step'
     backendServiceArm: 'AzureTer'
-    backendAzureRmResourceGroupName: '$(resourceGroup)'
-    backendAzureRmStorageAccountName: '$(storageAccount)'
+    backendAzureRmResourceGroupName: 'test'
+    backendAzureRmStorageAccountName: 'testterrazain'
     backendAzureRmContainerName: '$(container)'
     backendAzureRmKey: '$(tfstateFile)'
 
