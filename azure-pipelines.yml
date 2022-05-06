@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  subscription: 021d6251-6201-4e20-b5d3-6298ee2e0526
+  subscription: (021d6251-6201-4e20-b5d3-6298ee2e0526)
   resourceGroup: corona
   storageAccount: coronastorage21
   container: tfstate
