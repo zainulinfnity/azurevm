@@ -6,8 +6,8 @@ pool:
 
 variables:
   subscription: 021d6251-6201-4e20-b5d3-6298ee2e0526
-  resourceGroup: resourcegroup-tfstate
-  storageAccount: testterrazain
+  resourceGroup: corona
+  storageAccount: coronastorage21
   container: tfstate
   tfstateFile: terraform.tfstate
   anyTfChanges: false
@@ -25,9 +25,9 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/skip-step'
-    backendServiceArm: 'AzureTer'
-    backendAzureRmResourceGroupName: 'test'
-    backendAzureRmStorageAccountName: 'testterrazain'
+    backendServiceArm: '$(subscription)'
+    backendAzureRmResourceGroupName: '$(resourceGroup)'
+    backendAzureRmStorageAccountName: '$(storageAccount)'
     backendAzureRmContainerName: '$(container)'
     backendAzureRmKey: '$(tfstateFile)'
 
